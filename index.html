@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Back in Motion Chiropractic </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #818181;
+            font-family: Montserrat, sans-serif;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 30px;
+            #text-transform: uppercase;
+            color: #ff4900;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-size: 16px;
+            line-height: 1.375em;
+            color: white;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        .header {
+            color: #fff;
+            background: url("bgimage.jpg") center no-repeat;
+            background-size: cover;
+            height: 66vh;
+            width: 100%;
+            display: flex;
+        }
+        #topHeader {
+            position: absolute;
+            margin: auto;
+            top: 29vh;
+            left: 8vw;
+        }
+        #about {
+            background: #1BA66A;
+        }
+        .row-same-height {
+            display: table;
+            width: 100%;
+            /* fix overflow */
+            table-layout: fixed;
+        }
+        .pricingLeft {
+            background-color: #22679C;
+            padding: 40px 100px;
+        }
+        .pricingRight {
+            background: #1BA66A;
+            color: white;
+            font-size: 1em;
+        }
+        #activeLife {
+            background: url("bgimage2.jpg") center no-repeat;
+            background-size: cover;
+        }
+        #healthBenefits {
+            background-color: #1BA66A;
+        }
+        #workers {
+            background: url("bgimage3.jpg") center no-repeat;
+            background-size: cover;
+        }
+        #testimonials {
+            background-color: #22679C;
+        }
+        #contact {
+            background-color: #1BA66A;
+            color: white;
+        }
+        .section {
+            padding: 60px 50px;
+        }
+        .logo {
+            position: absolute;
+            left: 8vw;
+            top: 4vh;
+        }
+        .logo-small {
+            color: #ff4900;
+            font-size: 50px;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        .item h4 {
+            font-size: 17px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        .item span {
+            font-style: normal;
+        }
+        .navbar {
+            height: 9vh;
+            margin-bottom: 0;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+        }
+        .navbar-default{
+            background: none;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+            font-size: .9vw;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #ff4900 !important;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #ff4900 !important;
+        }
+        .navbar-collapse{
+            width: 86vw;
+            padding-top: 5vh;
+        }
+        footer > .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ff4900;
+        }
+        .slideanim {visibility:hidden;}
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        @media (min-width: 768px) {
+            .col-sm-height {
+                display: table-cell;
+                float: none !important;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body id="article" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!--Navbar-->
+<div class="header">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#article"><img class="logo" src="logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="collapseNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#healthBenefits">Health Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--Top Header-->
+    <div class="row" id="topHeader">
+        <h1>Is stress affecting your health?</h1>
+        <p>We provide the highest quality of chiropractic adjustments at affordable prices.</p>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+    <div class="row">
+        <div class="row-same-height">
+            <div class="col-sm-8 col-sm-height pricingLeft">
+                <h2>Our Mission is to help as many families feel better and achieve a higher level of health naturally with routine and affordable chiropractic care.</h2><br>
+                <h4>Back In Motion makes quality healthcare affordable through chiropractic care for people seeking wellness and pain relief. We offer traditional chiropractic adjustments for adults, kids and pregnant women. Our packages and membership plans eliminate the need for insurance making care more accesible .</h4>
+            </div>
+            <div class="col-sm-4 col-sm-height pricingRight">
+                <h1>$89 Special</h1><br>
+                <p>Consultation including 4 Chiropractic Adjustments.</p>
+                <p>Call to make an appointment today!</p>
+                <p><span class="glyphicon glyphicon-phone"></span>714.580.2498</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Container (Active Lifestyle Section) -->
+<div id="activeLife" class="container-fluid section">
+    <div class="row slideanim">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-8">
+            <h2>Routine chiropractic care is essential for an active lifestyle  </h2><br>
+            <h4>Chiropractic adjustments can help improve your performance and recovery. A body in motion stays in motion and a body at rest stays at rest. At rest or in motion, your lifestyle choices impact the health and function of your joints. Chiropractic provides a safe, natural and drug-free option to locate, correct and prevent joint dysfunctions, thereby playing a vital role in keeping your body balanced, flexible and functioning at its best.</h4><br>
+            <h4><strong>Why is chiropractic so important with an active lifestyle?</strong></h4>
+            <h4>Whether you do crossfit, mixed martial arts, runner, golfer or yoga, your spinal column is made up of 24 independent vertebrae that enable your body to move, twist and bend during activities. It also helps protect the delicate central nervous system that controls and coordinates every muscle, tissue and organ of the body. Subluxations of the spine, commonly known as joint dysfunctions, can negatively effect proper nerve communication from the brain to the body–often resulting in pain and discomfort.</h4><br>
+        </div>
+    </div>
+</div>
+
+<!-- Container (Health Benefits Section) -->
+<div id="healthBenefits" class="container-fluid section">
+    <div class="row slideanim">
+        <div class="col-sm-8">
+            <h2><strong>Health Benefits</strong></h2><br>
+            <h4><strong>Chiropractic adjustments can help improve:≈</strong></h4>
+            <h4><ul>
+                <li>Increased range of motion</li>
+                <li>Reduced recovery time</li>
+                <li>Decreased muscle soreness from intense workouts</li>
+                <li>Natural pain relief for joint pain</li>
+                <li>Enhanced immune functionality</li>
+                <li>Neck Pain & Back Pain</li>
+                <li>Headaches & Migraines</li>
+                <li>Leg Pain / Sciatica</li>
+                <li>Arthritis & Bursitis</li>
+                <li>Shoulder, Arm, Elbow & Wrist Pain</li>
+                <li>Knee, Ankle & Foot Pain</li>
+                <li>Carpal Tunnel Syndrome</li>
+            </ul></h4>
+            <h4><strong>Chiropractic and professional athletes</strong></h4>
+            <h4>Professional athletes of past and present, like Michael Jordan, Jerry Rice and Tom Brady, choose chiropractic to give them a competitive edge. Experts estimate that 90% of all world-class athletes use chiropractic care to prevent injuries and improve their performance.</h4>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+</div>
+
+<!-- Container (Workers Section) -->
+<div id="workers" class="container-fluid section">
+    <div class="row slideanim">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-8">
+            <h2>Routine chiropractic for the working class</h2><br>
+            <h4><strong>How Chiropractic works for those who sit or stand all day.</strong></h4>
+            <h4>Sitting or standing for an extended period of time can cause stress to your lower extremities and spine. This stress may cause back pain and discomfort from restricted joints otherwise known as subluxations or joint dysfunctions. These joint dysfunctions can cause improper joint motion and decreased nerve flow to the organs, tissues and cells of the body. A healthy spine is essential to limit and help prevent discomfort and pain.</h4>
+            <h4><strong>What makes chiropractic powerful?</strong></h4>
+            <h4>Your spinal column is made up of 24 independent vertebrae allowing your body to move, twist and bend through everyday motion. It also helps protect the delicate central nervous system that controls and coordinates every organ, tissue and cell of the body. Chiropractors apply a gentle, targeted movement where and when indicated to improve motion of the body’s spinal column and extremities. This is commonly known as a chiropractic adjustment.</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Container (Testimonials Section) -->
+<div id="testimonials" class="container-fluid section text-center">
+    <h2>Testimonials</h2>
+    <iframe width="720" height="340" src="https://www.youtube.com/embed/XWUX9FT_dFU" frameborder="0" allowfullscreen></iframe>
+    
+<!--
+    <h4>What we offer</h4>
+    <br>
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-off logo-small"></span>
+            <h4>POWER</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-heart logo-small"></span>
+            <h4>LOVE</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-lock logo-small"></span>
+            <h4>JOB DONE</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="row slideanim">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <h4>GREEN</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <h4>CERTIFIED</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-wrench logo-small"></span>
+            <h4>HARD WORK</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+    </div>
+-->
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid section">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+        <div class="col-sm-5">
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>Newport Beach, CA</p>
+            <p><span class="glyphicon glyphicon-phone"></span>714.580.2498</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>BackInMotionOC@gmail.com</p>
+        </div>
+        <div class="col-sm-7 slideanim">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Container (Google Maps Section) -->
+<div id="location" style="height:400px;width:100%;"></div>
+<script>
+    function googleMap() {
+        var myCenter = new google.maps.LatLng(33.6600346, -117.8672541);
+        var mapProp = {center:myCenter, zoom:14, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+        var map = new google.maps.Map(document.getElementById("location"),mapProp);
+        var marker = new google.maps.Marker({
+        position: myCenter,
+        animation: google.maps.Animation.BOUNCE
+     });
+        marker.setMap(map);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGdhHOJ4l85nDgg6shOMIsHGQE9St5iFo&callback=googleMap"></script>
+
+<!-- Container (Footer Section) -->
+<footer class="container-fluid section text-center">
+    <a href="#article" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p><a href="https://www.BackInMotionOC.com" title="Visit BackInMotionOC.com">www.BackInMotionOC.com</a></p>
+</footer>
+
+<!-- Script (Scroll Animation) -->
+<script>
+    $(document).ready(function(){
+        $(".navbar a, footer a[href='#article']").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+
+        $(window).scroll(function() {
+            $(".slideanim").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                }
+            });
+        });
+    })
+</script>
+
+</body>
+</html>
