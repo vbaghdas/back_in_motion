@@ -8,206 +8,17 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <style>
-        body {
-            line-height: 1.8;
-            color: #818181;
-            font-family: Montserrat, sans-serif;
-        }
-        .container-fluid {
-            padding: 0;
-        }
-        .row {
-            margin: 0;
-        }
-        h1 {
-            font-size: 4.2rem;
-        }
-        h2 {
-            font-size: 2.5rem;
-            color: #ff4900;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        h4 {
-            font-size: 16px;
-            line-height: 1.375em;
-            color: white;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-        .header {
-            color: #fff;
-            background: url("bgimage.jpg") center no-repeat;
-            background-size: cover;
-            height: 70vh;
-            width: 100%;
-            display: flex;
-        }
-        #topHeader {
-            position: absolute;
-            margin-top: 40vh;
-            left: 5.75vw;
-        }
-        .navbar-header > .logo {
-            padding-left: 4.75vw;
-        }
-        #about {
-            background: #1BA66A;
-        }
-        .row-same-height {
-            display: table;
-            width: 100%;
-            /* fix overflow */
-            table-layout: fixed;
-        }
-        .pricingLeft {
-            background-color: #22679C;
-            padding: 2vh 6vw;
-        }
-        .pricingLeft h4 {
-            margin-top: -2vh;
-        }
-        .pricingRight {
-            background: #1BA66A;
-            color: white;
-            font-size: 1em;
-        }
-        .pricingRight a, #contact a {
-            list-style-type: none;
-            color: #fff;
-        }
-        #activeLife {
-            background: url("bgimage2.jpg") center no-repeat;
-            background-size: cover;
-        }
-        #healthBenefits {
-            background-color: #1BA66A;
-        }
-        #workers {
-            background: url("bgimage3.jpg") center no-repeat;
-            background-size: cover;
-        }
-        #testimonials {
-            background-color: #22679C;
-        }
-        #contact {
-            background-color: #1BA66A;
-            color: white;
-        }
-        .form-group {
-            padding: 2vh 0 0 .25vh;
-        }
-        .section {
-            padding: 2vh 6vw;
-        }
-        .item h4 {
-            font-size: 17px;
-            line-height: 1.375em;
-            font-weight: 400;
-            font-style: italic;
-            margin: 70px 0;
-        }
-        .item span {
-            font-style: normal;
-        }
-        .navbar {
-            height: 9vh;
-            margin-bottom: 0;
-            border: 0;
-            font-size: 12px !important;
-            line-height: 1.42857143 !important;
-            letter-spacing: 4px;
-            border-radius: 0;
-        }
-        .navbar-default{
-            background: none;
-        }
-        .navbar-toggle {
-            float: left;
-        }
-        .navbar li a {
-            color: #fff !important;
-            font-size: 1.5rem;
-        }
-        .navbar-nav li a:hover, .navbar-nav li.active a {
-            color: #ff4900 !important;
-        }
-        .navbar-default .navbar-toggle {
-            border-color: transparent;
-            color: #ff4900 !important;
-        }
-        .navbar-default .container {
-            padding-top: 2vh;
-        }
-        .navbar-collapse{
-            width: 92.5vw;
-        }
-        .slideanim {visibility:hidden;}
-        .slide {
-            animation-name: slide;
-            -webkit-animation-name: slide;
-            animation-duration: 1s;
-            -webkit-animation-duration: 1s;
-            visibility: visible;
-        }
-        @keyframes slide {
-            0% {
-                opacity: 0;
-                transform: translateY(70%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0%);
-            }
-        }
-        @-webkit-keyframes slide {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateY(70%);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: translateY(0%);
-            }
-        }
-        @media (min-width: 768px) {
-            .col-sm-height {
-                display: table-cell;
-                float: none !important;
-            }
-            .navbar-right {
-                padding-top: 2vh;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            #topHeader {
-                position: absolute;
-                margin-top: 40vh;
-                left: 2.75vw;
-            }
-            .section {
-                padding: 2vh 3vw;
-            }
-            .col-sm-4 {
-                text-align: center;
-            }
-            .navbar-default .container {
-                padding-top: 0;
-            }
-            .navbar-header > .logo {
-                padding: 0.2em;
-            }
-        }
-    </style>
 </head>
+
 <body id="article" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <!--Navbar-->
 <div class="header">
     <nav class="navbar navbar-default">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNav">
                     <span class="icon-bar"></span>
@@ -227,26 +38,24 @@
         </div>
     </nav>
 <!--Top Header-->
-    <div class="row" id="topHeader">
+    <div id="topHeader" class="row">
         <h1>Is stress affecting your health?</h1>
         <p>We provide the highest quality of chiropractic adjustments at affordable prices.</p>
     </div>
 </div>
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-    <div class="row">
-        <div class="row-same-height">
-            <div class="col-sm-8 col-sm-height pricingLeft">
-                <h2>Our Mission is to help as many families feel better and achieve a higher level of health naturally with routine and affordable chiropractic care.</h2><br>
-                <h4>Back In Motion makes quality healthcare affordable through chiropractic care for people seeking wellness and pain relief. We offer traditional chiropractic adjustments for adults, kids and pregnant women. Our packages and membership plans eliminate the need for insurance making care more accesible .</h4>
-            </div>
-            <div class="col-sm-4 col-sm-height pricingRight">
-                <h1>$89 Special</h1><br>
-                <h4>Consultation including 4 Chiropractic Adjustments.</h4>
-                <h4>Call to make an appointment today!</h4>
-                <h4><span class="glyphicon glyphicon-phone"></span><a href="tel:1-714-580-2498">714.580.2498</a></h4>
-            </div>
+ <!--Container (About Section) -->
+<div id="aboutMe" class="container-fluid">
+    <div class="row-same-height">
+        <div class="col-sm-8 col-sm-height mission">
+            <h2>Our Mission is to help as many families feel better and achieve a higher level of health naturally with routine and affordable chiropractic care.</h2><br>
+            <h4>Back In Motion makes quality healthcare affordable through chiropractic care for people seeking wellness and pain relief. We offer traditional chiropractic adjustments for adults, kids and pregnant women. Our packages and membership plans eliminate the need for insurance making care more accesible .</h4>
+        </div>
+        <div class="col-sm-4 col-sm-height pricing">
+            <h1>$89 Special</h1><br>
+            <h4>Consultation including 4 Chiropractic Adjustments.</h4>
+            <h4>Call to make an appointment today!</h4>
+            <h4><span class="glyphicon glyphicon-phone"></span><a href="tel:1-714-580-2498">714.580.2498</a></h4>
         </div>
     </div>
 </div>
@@ -327,7 +136,7 @@
             <p><span class="glyphicon glyphicon-phone"></span><a href="tel:1-714-580-2498">714.580.2498</a></p>
             <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:BackInMotionOC@gmail.com?Subject=RE:%20Schedule%20an%20appointment" target="_top">BackInMotionOC@gmail.com</a></p>
         </div>
-        <form class="col-sm-7 slideanim" method="post" action="send_form_email.php".php" onsubmit="return checkForm(this);">
+        <form class="col-sm-7 slideanim" method="post" action="send_form_email.php" onsubmit="return checkForm(this);">
             <div class="row">
                 <div class="col-sm-6 form-group">
                     <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -348,22 +157,11 @@
 </div>
 
 <!-- Container (Google Maps Section) -->
-<div class='container-fluid'>
+<div id="googleMap" class='container-fluid'>
     <div id="location" style="height:400px;width:100%;"></div>
-        <script>
-            function googleMap() {
-                var myCenter = new google.maps.LatLng(33.6600346, -117.8672541);
-                var mapProp = {center:myCenter, zoom:14, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-                var map = new google.maps.Map(document.getElementById("location"),mapProp);
-                var marker = new google.maps.Marker({
-                position: myCenter,
-                animation: google.maps.Animation.BOUNCE
-             });
-                marker.setMap(map);
-            }
-        </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGdhHOJ4l85nDgg6shOMIsHGQE9St5iFo&callback=googleMap"></script>
 </div>
+
 <!-- Container (Footer Section) -->
 <footer class="container-fluid section text-center">
     <a href="#article" title="To Top">
@@ -371,34 +169,6 @@
     </a>
     <p><a href="https://www.BackInMotionOC.com" title="Visit BackInMotionOC.com">www.BackInMotionOC.com</a></p>
 </footer>
-
-<!-- Script (Scroll Animation) -->
-<script>
-    $(document).ready(function(){
-        $(".navbar a, footer a[href='#article']").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 900, function(){
-                    window.location.hash = hash;
-                });
-            }
-        });
-
-        $(window).scroll(function() {
-            $(".slideanim").each(function(){
-                var pos = $(this).offset().top;
-
-                var winTop = $(window).scrollTop();
-                if (pos < winTop + 600) {
-                    $(this).addClass("slide");
-                }
-            });
-        });
-    })
-</script>
 
 </body>
 </html>

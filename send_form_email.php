@@ -60,12 +60,12 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = 'vbaghdas@gmail.com';//<== update the email address
+$email_from = 'backinmotionoc@gmail.com';//<== update the email address
 $email_subject = "New Form submission";
 $email_body = "You have received a new message from the user $name.\n\r".
     "Here is the message:\n\r $message". "\n\r to: \n\r" .
 
-    $to = "vbaghdas@gmail.com";//<== update the email address
+    $to = "backinmotionoc@gmail.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!

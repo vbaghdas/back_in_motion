@@ -1,0 +1,194 @@
+body {
+    line-height: 1.8;
+    color: #818181;
+    font-family: Montserrat, sans-serif;
+}
+h1 {
+    font-size: 4.2rem;
+}
+h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #ff4900;
+    margin-bottom: 2.5vh;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 2.5vh;
+    line-height: 1.375em;
+}
+p {
+    margin: 0 5vw 1vh;
+}
+
+/*Navigation Bar Section*/
+.navbar {
+    height: 9vh;
+    margin-bottom: 0;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar li a {
+    color: #fff !important;
+    font-size: 1.5rem;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #ff4900 !important;
+}
+.navbar-default {
+    background: none;
+}
+.navbar-default .navbar-toggle {
+    float: left;
+    border-color: transparent;
+    color: #ff4900 !important;
+}
+.navbar-default .container-fluid {
+    padding-top: 2vh;
+}
+.navbar-collapse{
+    width: 90vw;
+}
+.navbar-header > .logo {
+    padding: 1rem 7rem;
+}
+.header {
+    color: #fff;
+    background: url("bgimage.jpg") center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+    #topHeader {
+        position: absolute;
+        top: 40vh;
+        left: 7vw;
+    }
+
+/*Section styling*/
+.section {
+    padding: 4vh 6vw;
+}
+#aboutMe {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    opacity: 0.8;
+}
+    #aboutMe h1 {
+        margin-top: 0;
+    }
+    .row-same-height {
+        display: table;
+        width: 100%;
+        margin: 0;
+        /* fix overflow */
+        table-layout: fixed;
+    }
+    .mission {
+        background-color: #22679C;
+        padding: 2vh 6vw;
+    }
+    .mission h2 {
+        color: #222;
+    }
+    .pricing {
+        background: #1BA66A;
+        color: #fff;
+        font-size: 1em;
+        padding: 2vh 6vw;
+    }
+    .pricing h4 {
+        margin-bottom: 0;
+    }
+    .pricing a, #contact a {
+        list-style-type: none;
+        color: #fff;
+}
+#activeLife {
+    background: url("bgimage2.jpg") center no-repeat;
+    background-size: cover;
+}
+#healthBenefits {
+    background-color: #1BA66A;
+}
+#workers {
+    background: url("bgimage3.jpg") center no-repeat;
+    background-size: cover;
+}
+#testimonials {
+    background-color: #22679C;
+}
+#contact {
+    background-color: #1BA66A;
+    color: #fff;
+}
+#googleMap {
+    padding: 0;
+}
+
+/*Animations for sliding effect*/
+.slideanim {
+    visibility:hidden;
+}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@media (min-width: 768px) {
+    .navbar-right {
+        padding-top: 4vh;
+    }
+    .col-sm-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    #topHeader {
+        position: absolute;
+        bottom: 25vh;
+        left: 7.75vw;
+    }
+    #aboutMe {
+        position: static;
+        padding: 0;
+        opacity: 1;
+    }
+    .section {
+        padding: 2vh 3vw;
+    }
+    .col-sm-4 {
+        text-align: center;
+    }
+    .navbar-header > .logo {
+        padding: 0.2em;
+    }
+}
